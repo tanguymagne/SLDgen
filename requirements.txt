@@ -6,8 +6,6 @@ numpy<2.0
 scikit-image<0.22
 git+https://github.com/asomoza/image_gen_aux.git
 torchmetrics
-plotly
-kaleido
 sentencepiece
 protobuf
 peft

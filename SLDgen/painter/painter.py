@@ -1,7 +1,6 @@
 from pathlib import Path
 
 import numpy as np
-import plotly.graph_objects as go
 import pydiffvg
 import svgwrite
 import torch
@@ -321,31 +320,6 @@ class SLDBSplinePainter(torch.nn.Module):
 
     def save_basis_spline(self, output_path):
         """Visualize and save basis spline functions and control point data."""
-        # Set up knot vector and sample points
-        n = 3  # Degree of the B-spline
-        n_control_points = len(self.control_points)
-        n_knots = n_control_points + n + 1
-        n_sample = self.args.sampling_rate
-        start_t = torch.linspace(0, 1, n_knots)[n]
-        end_t = torch.linspace(0, 1, n_knots)[-n - 1]
-        ts = torch.linspace(start_t, end_t, n_sample)
-
-        # Plot each basis function
-        basis_functions = self.normalized_basis_spline.detach().cpu().numpy()
-        fig = go.Figure()
-        for i, basis_function in enumerate(basis_functions):
-            fig.add_trace(
-                go.Scatter(
-                    x=ts,  # % len(knots),
-                    y=basis_function,
-                    mode="lines",
-                    marker=dict(size=2),
-                    name=f"Basis {i}",
-                )
-            )
-        fig.update_layout(width=1200, height=600, margin=dict(l=20, r=20, t=20, b=20))
-        fig.write_image(output_path)
-
         # Save control point metadata to CSV
         with open(Path(output_path).with_suffix(".csv"), "w") as f:
             f.write("Active, Weights, CoordX, CoordY\n")
