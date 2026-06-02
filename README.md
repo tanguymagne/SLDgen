@@ -1,4 +1,4 @@
-# Single Line Drawing Generation via Semantics-Driven Optimization 
+# Single-Line Drawing Generation via Semantics-Driven Optimization 
 
 [Tanguy Magne](https://tanguymagne.com/), [Alexandre Binninger](https://alexandrebinninger.com), [Ruben Wiersma](https://rubenwiersma.nl), [Olga Sorkine-Hornung](https://igl.ethz.ch) <br />
 
@@ -9,7 +9,7 @@
 
 ![Header](media/teaser.svg)
 
-This repository contains the code for the CGF paper **"Single Line Drawing Generation via Semantics-Driven Optimization"**.
+This repository contains the code for the CGF paper **"Single-Line Drawing Generation via Semantics-Driven Optimization"**.
 
 The code is partially based on the [ControlSketch](https://github.com/swiftsketch/SwiftSketch) part of SwiftSketch. We thank the authors for sharing their work.
 
@@ -45,10 +45,13 @@ docker run --gpus all --rm sldgen \
 
 ```
 @article{Magne:SLDgen:2026,
-title = {Single Line Drawing Generation via Semantics-Driven Optimization},
-author = {Magne, Tanguy and Binninger, Alexandre and Wiersma, Ruben and Sorkine-Hornung, Olga},
-journal = {Computer Graphics Forum},
-year = {2026},
-url = {https://doi.org/10.1111/cgf.70502},
+    title   = {Single Line Drawing Generation via Semantics-Driven Optimization},
+    author  = {Magne, Tanguy and Binninger, Alexandre and Wiersma, Ruben and Sorkine-Hornung, Olga},
+    journal = {Computer Graphics Forum},
+    volume  = {n/a},
+    number  = {n/a},
+    pages   = {e70502},
+    year    = {2026},
+    doi     = {https://doi.org/10.1111/cgf.70502},
 }
 ```
